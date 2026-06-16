@@ -506,8 +506,8 @@ For more information about configuration options, please visit the Wiki https://
     padding: 0 4px;
 }
 .taskbar-widget .app-container.foreground {
-    background-color: rgba(137, 180, 250, 0.563);
-    min-height: 21px;  /* Adjust to what fits your bar */
+    background-color: rgba(0, 22, 56, 0.563);
+    min-height: 22px;  /* Adjust to what fits your bar */
     border-radius: 6px;
 }
 .taskbar-widget .app-container.flashing {
