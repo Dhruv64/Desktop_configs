@@ -49,6 +49,7 @@ bars:
       - "apps"
       right:
       - "media"
+      - "vscode"
       # - "wifi"
       # - "microphone"
       - "volume"
@@ -56,6 +57,32 @@ bars:
       - "battery"
       - "power_menu"
 widgets:
+  vscode:
+    type: "yasb.vscode.VSCodeWidget"
+    options:
+      label: "<span>\udb82\ude1e</span>"
+      label_alt: "<span>\udb82\ude1e</span> recents"
+      menu_title: "<span style='font-weight:bold'>VScode</span> recents"
+      max_field_size: 50
+      folder_icon: "\uf114"
+      file_icon: "\uf016"
+      truncate_to_root_dir: false
+      hide_folder_icon: false
+      hide_file_icon: false
+      max_number_of_folders: 30
+      max_number_of_files: 30 # set to 0 if you only want folders
+      modified_date_format: "Date modified: %Y-%m-%d %H:%M"
+      cli_command: "code" # or "codium" or "windsurf" or any other CLI command to open the workspace
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "small"
+        alignment: 'center'
+        offset_top: 0
   windows_workspaces:
     type: "yasb.windows_desktops.WorkspaceWidget"
     options:

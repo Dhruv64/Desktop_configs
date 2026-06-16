@@ -1968,3 +1968,85 @@ expected ',' or '}', but got '<scalar>'
 2026-06-16 13:17:20,116 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\dhruv\.config\yasb
 2026-06-16 13:17:20,116 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
 2026-06-16 13:17:20,133 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-06-16 13:46:24,034 [INFO] [MainThread] [root/log.py:104]: YASB v2.0.4
+2026-06-16 13:46:24,035 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-06-16 13:46:24,035 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-06-16 13:46:24,248 [INFO] [MainThread] [windows_desktop_service/service.py:108]: Registered COM virtual desktop event successfully
+2026-06-16 13:46:24,630 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-06-16 13:46:24,931 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:196]: TaskbarWindowManager is starting...
+2026-06-16 13:46:25,298 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-06-16 13:46:25,298 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-06-16 13:46:25,299 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\dhruv\.config\yasb
+2026-06-16 13:46:25,299 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-06-16 13:46:25,314 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-06-16 13:53:55,896 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-06-16 13:53:56,000 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-06-16 13:53:56,007 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-06-16 13:53:56,256 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-06-16 13:53:56,260 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-06-16 13:53:56,261 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:223]: TaskbarWindowManager stopped
+2026-06-16 13:53:56,363 [INFO] [MainThread] [root/log.py:104]: YASB v2.0.4
+2026-06-16 13:53:56,364 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-06-16 13:53:56,364 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-06-16 13:53:56,696 [INFO] [MainThread] [windows_desktop_service/service.py:108]: Registered COM virtual desktop event successfully
+2026-06-16 13:53:57,189 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-06-16 13:53:57,564 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:196]: TaskbarWindowManager is starting...
+2026-06-16 13:53:58,068 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-06-16 13:53:58,068 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-06-16 13:53:58,069 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\dhruv\.config\yasb
+2026-06-16 13:53:58,070 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-06-16 13:53:58,096 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-06-16 13:56:42,660 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-06-16 13:56:42,768 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-06-16 13:56:42,776 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-06-16 13:56:43,003 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-06-16 13:56:43,007 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-06-16 13:56:43,008 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:223]: TaskbarWindowManager stopped
+2026-06-16 13:56:43,110 [INFO] [MainThread] [root/log.py:104]: YASB v2.0.4
+2026-06-16 13:56:43,110 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-06-16 13:56:43,110 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-06-16 13:56:43,442 [INFO] [MainThread] [windows_desktop_service/service.py:108]: Registered COM virtual desktop event successfully
+2026-06-16 13:56:43,827 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-06-16 13:56:44,134 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:196]: TaskbarWindowManager is starting...
+2026-06-16 13:56:44,594 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-06-16 13:56:44,594 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-06-16 13:56:44,595 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\dhruv\.config\yasb
+2026-06-16 13:56:44,595 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-06-16 13:56:44,613 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-06-16 13:56:46,790 [ERROR] [MainThread] [root/base.py:126]: Failed to execute callback of type 'toggle_vscode_menu' with args: []
+Traceback (most recent call last):
+  File "D:\a\yasb\yasb\src\core\widgets\base.py", line 124, in _run_callback
+KeyError: 'toggle_vscode_menu'
+2026-06-16 13:56:47,407 [ERROR] [MainThread] [root/base.py:126]: Failed to execute callback of type 'toggle_vscode_menu' with args: []
+Traceback (most recent call last):
+  File "D:\a\yasb\yasb\src\core\widgets\base.py", line 124, in _run_callback
+KeyError: 'toggle_vscode_menu'
+2026-06-16 13:56:47,628 [ERROR] [MainThread] [root/base.py:126]: Failed to execute callback of type 'toggle_vscode_menu' with args: []
+Traceback (most recent call last):
+  File "D:\a\yasb\yasb\src\core\widgets\base.py", line 124, in _run_callback
+KeyError: 'toggle_vscode_menu'
+2026-06-16 13:56:47,818 [ERROR] [MainThread] [root/base.py:126]: Failed to execute callback of type 'toggle_vscode_menu' with args: []
+Traceback (most recent call last):
+  File "D:\a\yasb\yasb\src\core\widgets\base.py", line 124, in _run_callback
+KeyError: 'toggle_vscode_menu'
+2026-06-16 13:56:48,240 [ERROR] [MainThread] [root/base.py:126]: Failed to execute callback of type 'toggle_vscode_menu' with args: []
+Traceback (most recent call last):
+  File "D:\a\yasb\yasb\src\core\widgets\base.py", line 124, in _run_callback
+KeyError: 'toggle_vscode_menu'
+2026-06-16 13:57:01,348 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-06-16 13:57:01,453 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-06-16 13:57:01,461 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-06-16 13:57:01,670 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-06-16 13:57:01,672 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-06-16 13:57:01,673 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:223]: TaskbarWindowManager stopped
+2026-06-16 13:57:01,795 [INFO] [MainThread] [root/log.py:104]: YASB v2.0.4
+2026-06-16 13:57:01,796 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-06-16 13:57:01,796 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-06-16 13:57:02,047 [INFO] [MainThread] [windows_desktop_service/service.py:108]: Registered COM virtual desktop event successfully
+2026-06-16 13:57:02,439 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-06-16 13:57:02,761 [INFO] [MainThread] [taskbar_window_manager/window_manager.py:196]: TaskbarWindowManager is starting...
+2026-06-16 13:57:03,212 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-06-16 13:57:03,213 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-06-16 13:57:03,213 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\dhruv\.config\yasb
+2026-06-16 13:57:03,213 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-06-16 13:57:03,229 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started

@@ -5,15 +5,15 @@ For more information about configuration options, please visit the Wiki https://
 :root {
     --mauve: #cba6f7;
     --red: #f38ba8;
-    --yellow: #ffd16d;
-    --blue: #448fff;
+    --yellow: #f9e2af;
+    --blue: #89b4fa;
     --lavender: #b4befe;
-    --text1: #d4d9eb;
-    --text2: #8f929e;
+    --text1: #cdd6f4;
+    --text2: #a6adc8;
     --text3: #9399b2;
     --text4: #7f849c;
-    --bg-color1: #191919;
-    --bg-color2: #333333;
+    --bg-color1: #1e1e2e;
+    --bg-color2: #313244;
 }
 * {
     font-size: 12px;
@@ -64,16 +64,16 @@ For more information about configuration options, please visit the Wiki https://
 .context-menu::item:selected,
 .context-menu .menu-checkbox:hover {
     background-color: var(--bg-color2);
-    color: #FFFFFF;
+    color: #cdd6f4;
 }
 
 .context-menu::separator {
     height: 1px;
-    background-color: #404040;
+    background-color: #45475a;
     margin: 4px 8px;
 }
 .context-menu::item:disabled {
-    color: #666666;
+    color: #6c7086;
     background-color: transparent;
 }
 
@@ -99,7 +99,7 @@ For more information about configuration options, please visit the Wiki https://
     margin-right: 8px;
 }
 .context-menu .menu-checkbox .checkbox::indicator:unchecked {
-    background: #444444;
+    background: #45475a;
     border-radius: 2px;
 }
 .context-menu .menu-checkbox .checkbox::indicator:checked {
@@ -180,7 +180,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .power-menu-popup .button.hover .label,
 .power-menu-popup .button.hover .icon {
-    color: rgba(255, 255, 255, 0.808)
+    color: rgba(205, 214, 244, 0.808)
 }
 .power-menu-popup .button.cancel .icon {
     padding: 0;
@@ -195,7 +195,7 @@ For more information about configuration options, please visit the Wiki https://
     border-radius: 4px;
 }
 .power-menu-popup .button.cancel.hover .label {
-    color: rgb(255, 255, 255)
+    color: #cdd6f4
 }
 .uptime {
     font-size: 14px;
@@ -242,9 +242,9 @@ For more information about configuration options, please visit the Wiki https://
 .weather-card-today .label.alert {
     font-size: 12px;
     font-weight: 700;
-    background-color: rgba(247, 199, 42, 0.05);
-    border: 1px solid rgba(247, 209, 42, 0.1);
-    color: rgba(196, 181, 162, 0.85);
+    background-color: rgba(249, 226, 175, 0.05);
+    border: 1px solid rgba(249, 226, 175, 0.1);
+    color: rgba(249, 226, 175, 0.85);
     border-radius: 6px;
     padding: 5px 0;
 }
@@ -254,7 +254,7 @@ For more information about configuration options, please visit the Wiki https://
     background-color: rgba(17, 17, 27, 0.2);
 }
 .weather-card-day.active {
-    border: 1px solid rgb(61, 61, 80);
+    border: 1px solid #45475a;
 }
 .weather-card-day .label {
     font-size: 12px;
@@ -265,7 +265,7 @@ For more information about configuration options, please visit the Wiki https://
     border: none
 }
 .weather-card .hourly-data {
-    background-color: #FAE93F;
+    background-color: #f9e2af;
     font-size: 12px;
     font-weight: bold;
 }
@@ -275,7 +275,7 @@ For more information about configuration options, please visit the Wiki https://
     border-radius: 0;
 }
 .media-widget .btn {
-    color: #7a7f8b;
+    color: #7f849c;
     padding: 0 4px;
     margin: 0;
     font-family: "JetBrainsMono NFP";
@@ -283,15 +283,15 @@ For more information about configuration options, please visit the Wiki https://
     font-size: 20px;
 }
 .media-widget .btn:hover {
-    color: #babfd3;
+    color: #bac2de;
 }
 .media-widget .btn.play {
     font-size: 24px;
-    color: #989caa;
+    color: #9399b2;
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
-    color: #4e525c;
+    color: #585b70;
     background-color: rgba(0, 0, 0, 0);
     font-size: 20px;
 }
@@ -318,7 +318,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .media-menu .source {
     font-size: 11px;
-    color: #000;
+    color: #1e1e2e;
     font-weight: normal;
     border-radius: 3px;
     background-color: #bac2de;
@@ -326,20 +326,20 @@ For more information about configuration options, please visit the Wiki https://
 
 }
 .media-menu .source.firefox {
-    background-color: #ff583b;
-    color: #ffffff;
+    background-color: #fab387;
+    color: #1e1e2e;
 }
 .media-menu .source.spotify {
-    background-color: #199143;
-    color: #ffffff;
+    background-color: #a6e3a1;
+    color: #1e1e2e;
 }
 .media-menu .source.edge {
-    background-color: #0078d4;
-    color: #ffffff;
+    background-color: #74c7ec;
+    color: #1e1e2e;
 }
 .media-menu .source.windows-media {
-    background-color: #0078d4;
-    color: #ffffff;
+    background-color: #89b4fa;
+    color: #1e1e2e;
 }
 
 .media-menu .btn {
@@ -357,7 +357,7 @@ For more information about configuration options, please visit the Wiki https://
     margin-left: 10px;
 }
 .media-menu .btn:hover {
-    color: white;
+    color: #cdd6f4;
     background-color: rgba(255, 255, 255, 0.1);
 }
 .media-menu .btn.play {
@@ -366,7 +366,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
-    color: #4e525c;
+    color: #585b70;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -396,7 +396,7 @@ For more information about configuration options, please visit the Wiki https://
     background: rgba(255, 255, 255, 0.2);
 }
 .media-menu .progress-slider::sub-page {
-    background: white;
+    background: #cdd6f4;
     border-radius: 3px;
     height: 4px;
 }
@@ -422,12 +422,12 @@ For more information about configuration options, please visit the Wiki https://
     font-weight: 600;
 }
 .home-menu .menu-item:hover {
-    background-color: rgba(128, 130, 158, 0.15);
-    color: #fff;
+    background-color: rgba(147, 153, 178, 0.15);
+    color: #cdd6f4;
 }
 .home-menu .separator {
     max-height: 1px;
-    background-color: rgba(128, 130, 158, 0.3);
+    background-color: rgba(147, 153, 178, 0.3);
 }
 .notification-widget {
     padding: 0 0px 0 4px;
@@ -447,7 +447,7 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .calendar-table,
 .calendar .calendar-table::item {
     background-color: rgba(17, 17, 27, 0);
-    color: rgba(162, 177, 196, 0.85);
+    color: rgba(166, 173, 200, 0.85);
     font-family: "Segoe UI";
     margin: 0;
     padding: 0;
@@ -455,7 +455,7 @@ For more information about configuration options, please visit the Wiki https://
     outline: none;
 }
 .calendar .calendar-table::item:selected {
-    color: #000000;
+    color: #1e1e2e;
     background-color: var(--blue);
     border-radius: 10px;
 }
@@ -469,7 +469,7 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .holiday-label {
     font-family: "Segoe UI";
     font-size: 16px;
-    color: #fff;
+    color: #cdd6f4;
     font-weight: 700;
     min-width: 180px;
     max-width: 180px;
@@ -478,10 +478,10 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .holiday-label {
     font-size: 12px;
     font-weight: 600;
-    color: rgba(162, 177, 196, 0.85);
+    color: rgba(166, 173, 200, 0.85);
 }
 .calendar .holiday-label {
-    color: rgba(162, 177, 196, 0.85);
+    color: rgba(166, 173, 200, 0.85);
     font-weight: 700;
 }
 .calendar .month-label {
@@ -490,12 +490,12 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .date-label {
     font-size: 88px;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: #cdd6f4;
     margin-top: -20px;
 }
 
 .taskbar-widget .widget-container { 
-    background-color: rgba(187, 176, 176, 0.281);
+    background-color: rgba(147, 153, 178, 0.281);
     border-radius: 15px;  
     padding: 0px 6px;
 }
@@ -506,12 +506,12 @@ For more information about configuration options, please visit the Wiki https://
     padding: 0 4px;
 }
 .taskbar-widget .app-container.foreground {
-    background-color: rgba(16, 55, 212, 0.563);
+    background-color: rgba(137, 180, 250, 0.563);
     min-height: 21px;  /* Adjust to what fits your bar */
     border-radius: 6px;
 }
 .taskbar-widget .app-container.flashing {
-    background-color: rgba(255, 106, 106, 0.63);
+    background-color: rgba(243, 139, 168, 0.63);
 }
 .taskbar-widget .app-container .app-title {
     padding-left: 4px;
@@ -519,17 +519,17 @@ For more information about configuration options, please visit the Wiki https://
 /* Taskbar preview popup is very limited in styling options, do not use margins/paddings here */
 .taskbar-preview {
     border-radius: 8px; 
-    background-color: #2b2c2d; 
+    background-color: #313244; 
 }
 .taskbar-preview.flashing { 
-    background-color: #7f434a;
+    background-color: #f38ba8;
 }
 .taskbar-preview .header {
     padding-bottom: 12px;
     padding-top: 4px;
 }
 .taskbar-preview .header .title {
-    color: #d6d6d6;
+    color: #cdd6f4;
     font-family: "Segoe UI";
     font-weight: 600;
     font-size: 13px;
@@ -596,11 +596,11 @@ For more information about configuration options, please visit the Wiki https://
 }
 .windows-desktops .context-menu .menu-item:hover {
     background-color: var(--bg-color2);
-    color: #ffffff;
+    color: #cdd6f4;
 }
 .windows-desktops .context-menu .separator {
     height: 1px;
-    background-color: #404040;
+    background-color: #45475a;
     margin: 4px 8px;
 }
 
@@ -625,7 +625,7 @@ For more information about configuration options, please visit the Wiki https://
 .windows-desktops .rename-dialog .rename-input {
     background-color: var(--bg-color2);
     color: var(--text1);
-    border: 1px solid #404040;
+    border: 1px solid #45475a;
     border-radius: 6px;
     padding: 5px 10px;
     font-size: 12px;
@@ -661,4 +661,57 @@ For more information about configuration options, please visit the Wiki https://
 .windows-desktops .rename-dialog .button.cancel:hover {
     color: var(--text1);
 }
+.vscode-widget .widget-container .icon {
+    color: #89b4fa;
+}
 
+.vscode-menu {
+    max-height: 500px;
+    min-width: 300px;
+}
+
+.vscode-menu .header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px;
+    color: #cdd6f4;
+    background-color: rgba(17, 17, 27, 0.4);
+}
+
+.vscode-menu .contents {
+    background-color: rgba(17, 17, 27, 0.4);
+}
+
+.vscode-menu .contents .item {
+    min-height: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.vscode-menu .contents .item .title {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.vscode-menu .contents .item .modified-date {
+    font-size: 11px;
+    margin-right: 5px;
+    color: #7f849c;
+}
+
+.vscode-menu .contents .item .folder-icon {
+    font-size: 16px;
+    margin-left: 8px;
+    color: #f2cdcd;
+}
+
+.vscode-menu .contents .item .file-icon {
+    font-size: 16px;
+    margin-left: 8px;
+    color: #cba6f7;
+}
+
+.vscode-menu .contents .item:hover {
+    background-color: #45475a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
