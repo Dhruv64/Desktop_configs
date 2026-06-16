@@ -147,7 +147,7 @@ widgets:
       callbacks:
         on_left: "toggle_media_menu"
         on_middle: "do_nothing"
-        on_right: "toggle_label"
+        on_right: "open_media_source"
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -412,8 +412,11 @@ widgets:
     options:
       label: "{data}"
       app_list:
-        
-        - {icon: "\ueb51", launch: "quick_settings"} # launch quick settings
+        - {icon: "\ueb51", launch: "quick_settings", name: "Quick Settings"} # launch quick settings
         - {icon: "\uf489", launch: "wt", name: "Windows Terminal"} # launch terminal
+        # - {icon: "\uf001", launch: "explorer.exe shell:AppsFolder\\Chrome._crx_cinhimbnkkghhklpknlkffjgod!Chrome._crx_cinhimbnkkghhklpknlkffjgod", name: "YouTube Music"}
+        #- {icon: "\uf001", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --app=https://music.youtube.com", name: "YouTube Music"}
         - {icon: "C:\\Users\\Dhruv\\Icons\\youtube.png", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -new-tab https://www.youtube.com", name: "YouTube"}
-
+        # - {icon: "C:\\Users\\Dhruv\\Icons\\youtube.png", launch: "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe", name: "Spotify"}
+        - {icon: "C:\\Users\\Dhruv\\Icons\\claude.png", launch: "explorer.exe shell:AppsFolder\\Claude_pzs8sxrjxfjjc!Claude", name: "Claude"}
+        # - {icon: "C:\\Users\\Dhruv\\Icons\\claude.png", launch: "explorer.exe shell:AppsFolder\\Claude_pzs8sxrjxfjjc!App", name: "Claude"}
