@@ -39,8 +39,6 @@ bars:
     widgets:
       left:
       - "home"
-      # - "komorebi_workspaces"
-      # - "komorebi_active_layout"
       -  "taskbar"
       - "windows_workspaces"
       - "active_window"
@@ -49,9 +47,12 @@ bars:
       - "apps"
       right:
       - "media"
+      - "control_center"
+      - "bluetooth"
+      - "systray"
       - "vscode"
-      # - "wifi"
-      # - "microphone"
+      # - "pomodoro"
+      - "weather"
       - "volume"
       - "notifications"
       - "battery"
@@ -173,6 +174,120 @@ widgets:
       callbacks:
         on_left: "toggle_calendar"
         on_right: "toggle_label"
+  control_center:
+    type: "yasb.control_center.ControlCenterWidget"
+    options:
+      label: "<span></span>"
+      tooltip: true
+      sections_order:
+        - "quick_actions"
+        - "sliders"
+        - "media"
+      popup:
+        alignment: "center"
+        direction: "down"
+        border_color: System
+        round_corners: true
+        round_corners_type: normal
+        offset_top: 8
+      sections:
+        system_controls:
+          profile_image_size: 28
+          power_icon: ""
+          lock_icon: ""
+          settings_icon: ""
+        quick_actions:
+          show: true
+          columns: 3
+          label_position: "default"
+          actions:
+            - id: "toggle_dnd"
+              label: "Do Not Disturb"
+              icon: ""
+            - id: "toggle_mute"
+              label: "Mute"
+              icon: ""
+            - id: "screenshot"
+              label: "Screenshot"
+              icon: ""
+        sliders:
+          show: true
+          brightness:
+            show_slider: true
+            icon: ""
+            show_source_selector: true
+          volume:
+            show_slider: true
+            icon: ""
+            show_source_selector: true
+          microphone:
+            show_slider: true
+            icon: ""
+            show_source_selector: true
+        media:
+          show: true
+          thumbnail_size: 36
+          thumbnail_radius: 4
+        power:
+          show: true
+          power_plan_title: "Power Plan"
+      callbacks:
+        on_left: "toggle_menu"
+  bluetooth:
+    type: "yasb.bluetooth.BluetoothWidget"
+    options:
+      label: "<span>{icon}</span> {device_count}"
+      label_alt: "<span>{icon}</span> {device_name}"
+      tooltip: true
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+  # pomodoro:
+  #   type: "yasb.pomodoro.PomodoroWidget"
+  #     options:
+  #       label: "{remaining}"
+  #       label_alt: "<span>{icon}</span> {session}/{total_sessions} - {status}"
+  #       work_duration: 25
+  #       break_duration: 5
+  #       long_break_duration: 15
+  #       long_break_interval: 4
+  #       auto_start_breaks: true
+  #       auto_start_work: true
+  #       sound_notification: true
+  #       show_notification: true
+  #       hide_on_break: false
+  #       session_target: 8
+  #       icons:
+  #         work: ""
+  #         break: ""
+  #         paused: ""
+  #       menu:
+  #         blur: true
+  #         round_corners: true
+  #         round_corners_type: "normal"
+  #         border_color: "System"
+  #         alignment: "right"
+  #         direction: "down"
+  #         offset_top: 6
+  #         offset_left: 0
+  #         circle_background_color: "#09ffffff"
+  #         circle_work_progress_color: "#88c0d0"
+  #         circle_break_progress_color: "#a3be8c"
+  #         circle_thickness: 8
+  #         circle_size: 160
+  #       callbacks:
+  #         on_left: "toggle_menu"
+  #         on_middle: "reset_timer"
+  #         on_right: "toggle_label"
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
@@ -225,7 +340,10 @@ widgets:
       api_key: env
       update_interval: 600
       hide_decimal: true
+      units: "metric"
       location: env
+      show_alerts: true
+      tooltip: true
       callbacks:
         on_left: "toggle_card"
         on_middle: "do_nothing"
@@ -261,6 +379,24 @@ widgets:
         current_line_color: "#8EAEE8"
         current_line_width: 1
         current_line_style: "dot"
+        hourly_gradient:
+          enabled: false
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        hourly_forecast_buttons:
+          enabled: true
+          default_view: "temperature"
+          temperature_icon: "\udb81\udd99"
+          rain_icon: "\udb81\udd96"
+          snow_icon: "\udb81\udd98"
+        weather_animation:
+          enabled: false
+          snow_overrides_rain: true
+          temp_line_animation_style: both
+          rain_effect_intensity: 1.0
+          snow_effect_intensity: 1.0
+          scale_with_chance: true
+          enable_debug: false
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -276,18 +412,6 @@ widgets:
       callbacks:
         on_left: "toggle_mute"
         on_right: "exec cmd.exe /c start ms-settings:sound"
-  # microphone:
-  #   type: "yasb.microphone.MicrophoneWidget"
-  #   options:
-  #     label: "<span>{icon}</span> {level}"
-  #     label_alt: "<span>{icon}</span> {level}%"
-  #     icons:
-  #       normal: "\udb80\udf6c"
-  #       muted: "\udb80\udf6d"
-  #     callbacks:
-  #       on_left: "toggle_mute"
-  #       on_middle: "toggle_label"
-  #       on_right: "exec cmd.exe /c start ms-settings:sound"
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
@@ -340,48 +464,6 @@ widgets:
         icon_medium: "\uf242"
         icon_high: "\uf241"
         icon_full: "\uf240"
-  # wifi:
-  #   type: "yasb.wifi.WifiWidget"
-  #   options:
-  #     label: "<span>{wifi_icon}</span> {wifi_strength}%"
-  #     label_alt: "{wifi_name} {wifi_strength}%"
-  #     update_interval: 5000
-  #     callbacks:
-  #       on_left: "toggle_menu"
-  #       on_middle: "exec cmd.exe /c start ms-settings:network"
-  #       on_right: "toggle_label"
-  #     ethernet_label: "<span>{wifi_icon}</span>"
-  #     ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
-  #     ethernet_icon: "\ueba9"
-  #     get_exact_wifi_strength: false  # Optional. Will require location access permission if true.
-  #     wifi_icons: [
-  #       "\udb82\udd2e",  # Icon for 0% strength
-  #       "\udb82\udd1f",  # Icon for 1-24% strength
-  #       "\udb82\udd22",  # Icon for 25-49% strength
-  #       "\udb82\udd25",  # Icon for 50-74% strength
-  #       "\udb82\udd28"   # Icon for 75-100% strength
-  #     ]
-  #     menu_config:
-  #       blur: true
-  #       round_corners: true
-  #       round_corners_type: "normal"
-  #       border_color: "System"
-  #       alignment: "right"
-  #       direction: "down"
-  #       offset_top: 6
-  #       offset_left: 0
-  #       wifi_icons_secured: [
-  #         "\ue670",
-  #         "\ue671",
-  #         "\ue672",
-  #         "\ue673",
-  #       ]
-  #       wifi_icons_unsecured: [
-  #         "\uec3c",
-  #         "\uec3d",
-  #         "\uec3e",
-  #         "\uec3f",
-  #       ]
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
@@ -413,10 +495,29 @@ widgets:
       label: "{data}"
       app_list:
         - {icon: "\ueb51", launch: "quick_settings", name: "Quick Settings"} # launch quick settings
-        - {icon: "\uf489", launch: "wt", name: "Windows Terminal"} # launch terminal
-        # - {icon: "\uf001", launch: "explorer.exe shell:AppsFolder\\Chrome._crx_cinhimbnkkghhklpknlkffjgod!Chrome._crx_cinhimbnkkghhklpknlkffjgod", name: "YouTube Music"}
-        #- {icon: "\uf001", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --app=https://music.youtube.com", name: "YouTube Music"}
-        - {icon: "C:\\Users\\Dhruv\\Icons\\youtube.png", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -new-tab https://www.youtube.com", name: "YouTube"}
-        # - {icon: "C:\\Users\\Dhruv\\Icons\\youtube.png", launch: "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe", name: "Spotify"}
+        - {icon: "\uf489", launch: "wt", name: "Terminal"} # launch terminal
+        - {icon: "\udb81\udd9f", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -new-window", name: "Chrome"}
+        - {icon: "\uf16a", launch: "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -new-tab https://www.youtube.com", name: "YouTube"}
         - {icon: "C:\\Users\\Dhruv\\Icons\\claude.png", launch: "explorer.exe shell:AppsFolder\\Claude_pzs8sxrjxfjjc!Claude", name: "Claude"}
-        # - {icon: "C:\\Users\\Dhruv\\Icons\\claude.png", launch: "explorer.exe shell:AppsFolder\\Claude_pzs8sxrjxfjjc!App", name: "Claude"}
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "▼"
+      label_expanded: "▲"
+      label_position: "right"
+      icon_size: 16
+      pin_click_modifier: "alt"
+      show_in_popup: true
+      icons_per_row: 4
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: None
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+
+  

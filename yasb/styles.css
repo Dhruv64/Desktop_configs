@@ -217,8 +217,10 @@ For more information about configuration options, please visit the Wiki https://
     color: var(--blue);
     margin: 0px 2px 0 0;
 }
-.weather-widget,
 .volume-widget {
+    padding: 0 6px;
+}
+.weather-widget {
     padding: 0 6px;
 }
 .weather-widget .icon {
@@ -228,9 +230,11 @@ For more information about configuration options, please visit the Wiki https://
 }
 .weather-card {
     background-color: var(--bg-color1);
-    border-radius: 8px;
-    min-width: 540px;
+}
+.weather-card-today {
     border: 1px solid var(--bg-color2);
+    border-radius: 8px;
+    background-color: rgba(17, 17, 27, 0.2);
 }
 .weather-card-today .label {
     font-size: 12px;
@@ -249,25 +253,64 @@ For more information about configuration options, please visit the Wiki https://
     padding: 5px 0;
 }
 .weather-card-day {
-    border: 1px solid transparent;
+    border: 1px solid var(--bg-color2);
     border-radius: 8px;
     background-color: rgba(17, 17, 27, 0.2);
 }
 .weather-card-day.active {
+    background-color: var(--bg-color2);
     border: 1px solid #45475a;
+}
+.weather-card-day:hover {
+    background-color: var(--bg-color2);
 }
 .weather-card-day .label {
     font-size: 12px;
 }
 .weather-card .hourly-container {
-    background-color: transparent;
+    border: 1px solid var(--bg-color2);
+    background-color: rgba(17, 17, 27, 0.2);
+    border-radius: 8px;
     min-height: 150px;
-    border: none
 }
 .weather-card .hourly-data {
-    background-color: #f9e2af;
     font-size: 12px;
     font-weight: bold;
+}
+.weather-card .hourly-data.temperature {
+    background-color: var(--yellow);
+}
+.weather-card .hourly-data.rain {
+    background-color: var(--blue);
+}
+.weather-card .hourly-data.snow {
+    background-color: var(--lavender);
+}
+.weather-card .hourly-data .hourly-rain-animation {
+    color: rgba(137, 180, 250, 40);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.weather-card .hourly-data .hourly-snow-animation {
+    color: rgba(255, 255, 255, 150);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.weather-card .hourly-data-buttons {
+    margin: 0px;
+}
+.weather-card .hourly-data-button {
+    border-radius: 4px;
+    min-height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    font-size: 14px;
+    color: var(--text4);
+    border: 1px solid transparent;
+}
+.weather-card .hourly-data-button.active {
+    color: var(--text1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .media-widget {
     padding: 0;
@@ -714,4 +757,594 @@ For more information about configuration options, please visit the Wiki https://
 .vscode-menu .contents .item:hover {
     background-color: #45475a;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.systray {
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+.systray .unpinned-container {
+    background: transparent;
+}
+.systray .pinned-container {
+    background: transparent;
+}
+.systray .button {
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.systray .button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+.systray .button.dragging {}
+
+.systray .button.drag-over {
+     background: rgba(255, 255, 255, 0.4);
+}
+
+.systray .pinned-container.drop-target {
+    background: rgba(255, 255, 255, 0.1);
+}
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+    border: none;
+    outline: none;
+}
+
+.systray .unpinned-visibility-btn:checked {
+    background: transparent;
+}
+
+.systray .unpinned-visibility-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Popup styles (when show_in_popup is true) */
+
+/* The icon the drag is hovering over (drop target icon) */
+.systray-popup .button.drag-over {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+.systray-popup .button.dragging {}
+
+.systray .pinned-container.pinned-container.drop-target {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.systray-popup {
+    background-color: rgba(48, 48, 48, 0.6);
+    padding: 4px;
+}
+.systray-popup .button {
+    padding: 10px;
+    margin: 0;
+    border: 0;
+    border-radius: 6px;
+}
+.systray-popup .button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+.window-switcher-widget {}
+.window-switcher-widget .label {}
+.window-switcher-widget .icon {
+    font-family: "JetBrainsMono NFP"
+}
+
+/* Styling for the popup container */
+.window-switcher-popup {
+    background-color: rgba(18, 19, 20, 0.4);
+    padding: 10px;
+}
+/* Styling for each window item */
+.window-switcher-popup .item {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid transparent
+}
+/* Hover or keyboard-focus effect */
+.window-switcher-popup .item:hover,
+.window-switcher-popup .item.active {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+/* Window title text styling */
+.window-switcher-popup .title {
+    padding: 10px 10px 5px 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.158);
+}
+
+/* Control Center Widget */
+.control-center-widget .icon {
+    color: var(--blue);
+}
+
+.control-center-menu {
+    background-color: var(--bg-color1);
+    border: 1px solid var(--bg-color2);
+    border-radius: 8px;
+    min-width: 360px;
+}
+.control-center-menu .section {
+    background: transparent;
+    margin: 0;
+    padding: 16px 12px;
+    border-bottom: 1px solid var(--bg-color2);
+}
+.control-center-menu .section.system-controls {
+    padding: 12px 16px 0 16px;
+    border-bottom: none;
+}
+.control-center-menu .section.sliders {
+    padding: 16px;
+}
+.control-center-menu .section.media,
+.control-center-menu .section.power {
+    border-bottom: none;
+}
+
+/* Shared Segoe Fluent Icons */
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.quick-actions .button .icon,
+.control-center-menu .section.sliders .slider .icon,
+.control-center-menu .section.sliders .slider .source-selector,
+.control-center-menu .section.power .plan-name .icon,
+.control-center-menu .section.power .mode-name .icon,
+.control-center-menu .section.media .button {
+    font-family: "Segoe Fluent Icons";
+    font-weight: 400;
+}
+
+/* Shared hover & transition */
+.control-center-menu .section.quick-actions .button .icon,
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.sliders .slider .source-selector,
+.control-center-menu .section.power .plan-name,
+.control-center-menu .section.power .mode-name,
+.control-center-menu .section.media .button {
+    transition: background-color 0.08s, opacity 0.08s;
+    opacity: 1;
+}
+
+/* Shared clicked/pressed states */
+.control-center-menu .section.system-controls .button:pressed,
+.control-center-menu .section.quick-actions .button .icon:pressed,
+.control-center-menu .section.sliders .slider .source-selector:pressed,
+.control-center-menu .section.power .plan-name:pressed,
+.control-center-menu .section.power .mode-name:pressed,
+.control-center-menu .section.media .button:pressed {
+    opacity: 0.5;
+}
+
+/* Shared disabled states */
+.control-center-menu .section.quick-actions .button.disabled .title,
+.control-center-menu .section.quick-actions .button.disabled .icon,
+.control-center-menu .section.sliders .slider.disabled,
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.media .button.disabled:hover {
+    opacity: 0.5;
+}
+
+/* System controls */
+.control-center-menu .section.system-controls .button {
+    background-color: var(--bg-color2);
+    border-radius: 16px;
+    min-height: 32px;
+    max-height: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    font-size: 14px;
+    color: var(--text1);
+}
+.control-center-menu .section.system-controls .button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Quick actions */
+.control-center-menu .section.quick-actions .button {
+    margin: 0 4px;
+    cursor: pointer;
+}
+.control-center-menu .section.quick-actions .button .icon {
+    font-size: 16px;
+    background-color: var(--bg-color2);
+    border: 1px solid var(--bg-color2);
+    min-height: 48px;
+    border-radius: 6px;
+    color: var(--text1);
+}
+.control-center-menu .section.quick-actions .button .icon:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.control-center-menu .section.quick-actions .button.active .icon {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--bg-color1);
+}
+.control-center-menu .section.quick-actions .button.active .icon:hover {
+    background-color: var(--lavender);
+    border: 1px solid var(--lavender);
+    color: var(--bg-color1);
+}
+.control-center-menu .section.quick-actions .button .title {
+    font-size: 12px;
+    margin: 4px 0 8px 0;
+    padding: 0;
+    font-weight: 600;
+    color: var(--text1);
+}
+
+/* Sliders */
+.control-center-menu .section.sliders .slider {
+    background: transparent;
+    border: none;
+    min-height: 34px;
+    margin: 0 4px;
+}
+.control-center-menu .section.sliders .slider .icon {
+    font-size: 16px;
+    color: var(--text1);
+    min-width: 36px;
+}
+.control-center-menu .section.sliders .slider .value {
+    min-width: 36px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.control-center-menu .section.sliders .slider .source-selector {
+    font-size: 12px;
+    color: var(--text3);
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: transparent;
+    margin-left: 4px;
+}
+.control-center-menu .section.sliders .slider .source-selector:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Power plan & mode */
+.control-center-menu .section.power .plan-name,
+.control-center-menu .section.power .mode-name {
+    background: var(--bg-color2);
+    border: 1px solid var(--bg-color2);
+    border-radius: 6px;
+    min-height: 36px;
+    margin: 0 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.control-center-menu .section.power .plan-name:hover,
+.control-center-menu .section.power .mode-name:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+.control-center-menu .section.power .mode-name.disabled,
+.control-center-menu .section.power .mode-name.disabled:hover {
+    opacity: 0.5;
+    background: var(--bg-color2);
+}
+.control-center-menu .section.power .plan-name .title,
+.control-center-menu .section.power .mode-name .title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text3);
+}
+.control-center-menu .section.power .plan-name .subtext,
+.control-center-menu .section.power .mode-name .subtext {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.control-center-menu .section.power .plan-name .icon,
+.control-center-menu .section.power .mode-name .icon {
+    color: var(--text3);
+    font-size: 14px;
+}
+/* Power mode selector is hidden, only the power plan selector is shown */
+.control-center-menu .section.power .mode-name {
+    display: none;
+}
+
+/* Media */
+.control-center-menu .section.media {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-top: 1px solid var(--bg-color2);
+}
+.control-center-menu .section.media .track-info {
+    padding-left: 8px;
+}
+.control-center-menu .section.media .title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.control-center-menu .section.media .subtext {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text3);
+}
+.control-center-menu .section.media .button {
+    font-size: 14px;
+    background-color: transparent;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    border-radius: 6px;
+    margin: 0 0 0 4px;
+}
+.control-center-menu .section.media .button:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.media .button.disabled:hover {
+    background-color: transparent;
+}
+
+/* Context menu inside the Control Center panel */
+.control-center-menu .context-menu {
+    background-color: var(--bg-color1);
+    padding: 4px 0px;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text1);
+}
+.control-center-menu .context-menu::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 4px;
+    min-width: 100px;
+}
+.control-center-menu .context-menu::item:selected {
+    background-color: var(--bg-color2);
+    color: #FFFFFF;
+}
+.control-center-menu .context-menu::separator {
+    height: 1px;
+    background-color: #45475a;
+    margin: 4px 0;
+}
+.control-center-menu .context-menu::indicator:checked {
+    width: 4px;
+    height: 12px;
+    background-color: var(--blue);
+    border-radius: 2px;
+    margin-left: 0;
+}
+
+/* Bluetooth Widget */
+.bluetooth-widget .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 15px;
+}
+.bluetooth-widget .icon.bt-off,
+.bluetooth-widget .label.bt-off {
+    color: var(--text4);
+}
+.bluetooth-widget .icon.bt-on,
+.bluetooth-widget .label.bt-on {
+    color: var(--blue);
+}
+.bluetooth-widget .icon.bt-connected,
+.bluetooth-widget .label.bt-connected {
+    color: #a6e3a1;
+}
+
+.bluetooth-menu {
+    background-color: var(--bg-color1);
+    border: 1px solid var(--bg-color2);
+    border-radius: 8px;
+    min-width: 360px;
+    min-height: 480px;
+}
+.bluetooth-menu .header {
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--bg-color2);
+}
+.bluetooth-menu .header .title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.bluetooth-menu .header .power-button {
+    background-color: var(--bg-color2);
+    border: none;
+    border-radius: 4px;
+    color: var(--text1);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    margin-left: 8px;
+}
+.bluetooth-menu .header .power-button:checked {
+    background-color: var(--blue);
+    color: var(--bg-color1);
+}
+.bluetooth-menu .header .progress-bar {
+    min-height: 2px;
+    max-height: 2px;
+    color: var(--blue);
+}
+.bluetooth-menu .bluetooth-list {
+    background-color: transparent;
+}
+.bluetooth-menu .section {
+    background-color: transparent;
+}
+.bluetooth-menu .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 12px 4px;
+    color: var(--text3);
+}
+.bluetooth-menu .error-message {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 0;
+    background-color: #92242d;
+    color: var(--red);
+}
+.bluetooth-menu .bluetooth-item {
+    min-height: 44px;
+    padding: 6px 12px;
+    margin: 2px 4px;
+    border-radius: 6px;
+}
+.bluetooth-menu .bluetooth-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.bluetooth-menu .bluetooth-item.active {
+    background-color: var(--bg-color2);
+    border-radius: 6px;
+}
+.bluetooth-menu .bluetooth-item .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 18px;
+    margin-right: 12px;
+    min-width: 28px;
+    font-weight: 400;
+    color: var(--text1);
+}
+.bluetooth-menu .bluetooth-item .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.bluetooth-menu .bluetooth-item .status {
+    font-size: 12px;
+    color: var(--text3);
+    font-weight: 600;
+}
+.bluetooth-menu .bluetooth-item .battery {
+    font-size: 13px;
+    font-weight: 600;
+    padding-right: 6px;
+    color: var(--text1);
+}
+.bluetooth-menu .bluetooth-item .battery-icon {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Segoe Fluent Icons";
+    color: var(--text1);
+}
+.bluetooth-menu .bluetooth-item .controls-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.bluetooth-menu .bluetooth-item .connect {
+    background-color: var(--bg-color2);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.bluetooth-menu .bluetooth-item .connect:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.bluetooth-menu .footer {
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--bg-color2);
+}
+.bluetooth-menu .footer .settings-button {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text1);
+    cursor: pointer;
+}
+.bluetooth-menu .footer .scan-icon {
+    font-family: "Segoe Fluent Icons";
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    min-width: 28px;
+    min-height: 28px;
+    color: var(--text1);
+    border-radius: 4px;
+}
+.bluetooth-menu .footer .scan-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Pomodoro Widget */
+.pomodoro-widget {
+    padding: 0 6px;
+}
+.pomodoro-widget .icon {
+    font-size: 12px;
+    padding-right: 4px;
+}
+.pomodoro-widget .label.paused,
+.pomodoro-widget .icon.paused {
+    color: var(--text4);
+}
+.pomodoro-widget .label.work,
+.pomodoro-widget .icon.work {
+    color: #a6e3a1;
+}
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break {
+    color: var(--blue);
+}
+
+/* Pomodoro menu styling */
+.pomodoro-menu {
+    background-color: var(--bg-color1);
+    border: 1px solid var(--bg-color2);
+    border-radius: 8px;
+}
+.pomodoro-menu .header {
+    font-size: 16px;
+    font-weight: 600;
+    max-height: 0px;
+    color: var(--text1);
+}
+.pomodoro-menu .status {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text1);
+}
+.pomodoro-menu .session {
+    font-size: 12px;
+    color: var(--text2);
+}
+.pomodoro-menu .button {
+    background-color: var(--bg-color2);
+    color: var(--text1);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+.pomodoro-menu .button:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+}
+.pomodoro-menu .button.pause {
+    background-color: #a6e3a1;
+    color: var(--bg-color1);
+}
+.pomodoro-menu .button:pressed {
+    background-color: #5a5b6e;
 }
